@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
+        <style>
+            body
+            {
+                background-color: #96deda; 
+                font-family: "Helvetica", "Arial", sans-serif;
+            }
+            #page_title
+            {
+                padding-left: 30px;
+            }
+            li 
+            {
+                padding-bottom: 10px;
+            }         
+           
+        </style>
+    </head>
+    <body>
+        <h1 id="page_title">Some common types of fruit</h1>
+		<div id="ListOfFruit"></div>
+		<script>
+		var TypesOfFruit = ['Apple','Banana','Grapes','Mango','Orange','Pear'];
+		var ol = document.createElement('ol');
+		document.getElementById('ListOfFruit').appendChild(ol);
+		TypesOfFruit.forEach(function(FruitName)
+        {
+			var li = document.createElement('li');
+			ol.appendChild(li);
+			li.innerHTML += FruitName;
+		});
+		</script>
+	</body>
+    </html>
